@@ -16,7 +16,7 @@
   },
   "autoload": {
     "files": [
-      "class-elementor.php"
+      "class-buddyboss.php"
     ]
   },
   "scripts": {
