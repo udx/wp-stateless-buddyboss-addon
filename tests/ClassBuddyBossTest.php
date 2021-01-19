@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use wpCloud\StatelessMedia\WPStatelessStub;
-use wpCloud\StatelessMedia\ICompatibility;
+use wpCloud\StatelessMedia\Compatibility;
 use WPSL\BuddyBoss;
 
 /**

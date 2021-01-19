@@ -2,13 +2,13 @@
 
 namespace WPSL\BuddyBoss;
 
-use wpCloud\StatelessMedia\ICompatibility;
+use wpCloud\StatelessMedia\Compatibility;
 use wpCloud\StatelessMedia\Utility;
 
 /**
  * @todo make testable and test
  */
-class BuddyBoss extends ICompatibility {
+class BuddyBoss extends Compatibility {
   protected $id = 'buddyboss';
   protected $title = 'BuddyBoss';
   protected $constant = 'WP_STATELESS_COMPATIBILITY_BUDDYBOSS';
