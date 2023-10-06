@@ -1,6 +1,6 @@
 {
   "name": "udx/wp-stateless-buddyboss-addon",
-  "description": "Ensures compatibility with buddyboss",
+  "description": "Ensures compatibility with Buddyboss Platform",
   "type": "wordpress-plugin",
   "license": "MIT",
   "authors": [

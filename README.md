@@ -1,4 +1,6 @@
-# WP-Stateless - BuddyBoss Addon
+# WP-Stateless - BuddyBoss Platform Addon
+
+Provides compatibility between BuddyBoss Platform WP-Stateless plugins.
 
 ---
 
