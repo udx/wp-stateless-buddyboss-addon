@@ -7,7 +7,7 @@
  * Author: UDX
  * Version: 0.0.1
  * Text Domain: wpslea
- * Author URI: https://udx2.io
+ * Author URI: https://udx.io
  * License: MIT
  * 
  * Copyright 2023 UDX (email: info@udx.io)
