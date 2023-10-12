@@ -3,7 +3,9 @@
 namespace WPSL\BuddyBoss;
 
 use PHPUnit\Framework\TestCase;
-use wpCloud\StatelessMedia\WPStatelessStub;
+use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use Brain\Monkey;
+use Brain\Monkey\Functions;
 use WPSL\BuddyBoss\BuddyBoss;
 
 /**
@@ -12,54 +14,53 @@ use WPSL\BuddyBoss\BuddyBoss;
 
 class ClassBuddyBossTest extends TestCase {
 
-  public static $functions;
+  // Adds Mockery expectations to the PHPUnit assertions count.
+  use MockeryPHPUnitIntegration;
+
+  const TEST_URL = 'https://test.test';
+  const TEST_FILE = self::TEST_URL . '/buddyboss-platform/test';
 
   public function setUp(): void {
-    self::$functions = $this->createPartialMock(
-      ClassBuddyBossTest::class,
-      ['add_filter', 'apply_filters']
-    );
-
-    $this::$functions->method('apply_filters')->will($this->returnArgument(1));
+		parent::setUp();
+		Monkey\setUp();
   }
 
-  public function testShouldInitModule() {
-    self::$functions->expects($this->exactly(1))
-      ->method('add_filter')
-      ->with('stateless_skip_cache_busting');
+  public function tearDown(): void {
+		Monkey\tearDown();
+		parent::tearDown();
+	}
 
+  public function testShouldInitHooks() {
     $budyboss = new BuddyBoss();
+
     $budyboss->module_init([]);
+
+    self::assertNotFalse( has_filter('stateless_skip_cache_busting', [ $budyboss, 'skip_cache_busting' ]) );
   }
 
   public function testShouldSkipCacheBusting() {
     $budyboss = new BuddyBoss();
 
-    $this->assertEquals('https://test.test/buddyboss-platform/test', $budyboss->skip_cache_busting(null, 'https://test.test/buddyboss-platform/test'));
+    $this->assertEquals(
+      self::TEST_FILE, 
+      $budyboss->skip_cache_busting('some-value', self::TEST_FILE)
+    );
   }
 
-  public function add_filter() {
-  }
+  public function testShouldNotSkipCacheBusting() {
+    $budyboss = new BuddyBoss();
 
-  public function apply_filters() {
-  }
-
-  public function debug_backtrace($a, $b) {
+    $this->assertEquals(
+      'some-value', 
+      $budyboss->skip_cache_busting('some-value', self::TEST_URL . '/avatar.png')
+    );
   }
 }
 
-function add_filter($a, $b, $c = 10, $d = 1) {
-  return ClassBuddyBossTest::$functions->add_filter($a, $b, $c, $d);
-}
-
-function apply_filters($a, $b) {
-  return ClassBuddyBossTest::$functions->apply_filters($a, $b);
-}
-
-function strpos() {
-  return true;
-}
-
-function ud_get_stateless_media() {
-  return WPStatelessStub::instance();
+function debug_backtrace($a) {
+  return [
+    '6' => [
+      'file' => '/buddyboss-platform/',
+    ],
+  ];
 }
