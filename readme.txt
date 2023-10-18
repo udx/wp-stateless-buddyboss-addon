@@ -9,7 +9,7 @@ Tested up to: 6.3.1
 Tested with BuddyBoss Platform: 2.4.30
 Stable tag: 0.0.1
 
-Provides compatibility between BuddyBoss Platform WP-Stateless plugins.
+Provides compatibility between BuddyBoss Platform and WP-Stateless plugins.
 
 == Description ==
 
