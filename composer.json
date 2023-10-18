@@ -27,6 +27,6 @@
     ]
   },
   "scripts-descriptions": {
-    "test": "Run all tests.",
+    "test": "Run all tests."
   }
 }
