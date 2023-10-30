@@ -23,13 +23,12 @@ class BuddyBoss extends Compatibility {
     add_filter( 'stateless_skip_cache_busting', array( $this, 'skip_cache_busting' ), 10, 2 );
   }
 
-    /**
-     * skip cache busting for template file name.
-     * @param $return
-     * @param $filename
-     * @return mixed
-     */
-
+  /**
+   * skip cache busting for template file name.
+   * @param $return
+   * @param $filename
+   * @return mixed
+   */
   public function skip_cache_busting( $return, $filename ) {
     $info = pathinfo( $filename );
     $backtrace = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 8 );
