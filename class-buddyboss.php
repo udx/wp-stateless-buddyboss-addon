@@ -6,7 +6,7 @@ use wpCloud\StatelessMedia\Compatibility;
 use wpCloud\StatelessMedia\Utility;
 
 /**
- * @todo make testable and test
+ * Class BuddyBoss
  */
 class BuddyBoss extends Compatibility {
   protected $id = 'buddyboss';
@@ -24,7 +24,7 @@ class BuddyBoss extends Compatibility {
   }
 
   /**
-   * skip cache busting for template file name.
+   * Skip cache busting for template file name.
    * @param $return
    * @param $filename
    * @return mixed
