@@ -1,6 +1,6 @@
 <?php
 
-namespace WPSL\BuddyBoss;
+namespace SLCA\BuddyBoss;
 
 use wpCloud\StatelessMedia\Compatibility;
 use wpCloud\StatelessMedia\Utility;

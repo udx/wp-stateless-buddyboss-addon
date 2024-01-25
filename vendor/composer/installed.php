@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'udx/wp-stateless-buddyboss-addon',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '1b767ed5c537e8a2d29ad84efdc4ea9b6407ebfd',
+        'pretty_version' => 'dev-latest',
+        'version' => 'dev-latest',
+        'reference' => '3d31039596cdf2f586673377800300880e74e451',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'udx/wp-stateless-buddyboss-addon' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '1b767ed5c537e8a2d29ad84efdc4ea9b6407ebfd',
+            'pretty_version' => 'dev-latest',
+            'version' => 'dev-latest',
+            'reference' => '3d31039596cdf2f586673377800300880e74e451',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
