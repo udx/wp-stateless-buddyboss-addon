@@ -1,12 +1,11 @@
 <?php
 
-namespace WPSL\BuddyBoss;
+namespace SLCA\BuddyBoss;
 
 use PHPUnit\Framework\TestCase;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use Brain\Monkey;
 use Brain\Monkey\Functions;
-use WPSL\BuddyBoss\BuddyBoss;
 
 /**
  * Class ClassBuddyBossTest
