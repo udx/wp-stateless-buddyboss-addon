@@ -5,7 +5,7 @@ Tags: buddyboss, buddyboss addon extension, google cloud storage, stateless, wp-
 License: GPLv2 or later
 Requires PHP: 8.0
 Requires at least: 5.0
-Tested up to: 6.7.1
+Tested up to: 6.8
 Stable tag: 0.0.2
 
 Provides compatibility between the BuddyBoss Platform and the WP-Stateless plugin.
@@ -20,7 +20,7 @@ Provides compatibility between the [BuddyBoss Platform](https://www.buddyboss.co
 
 = Notes =
 
-* Tested with BuddyBoss Platform plugin version 2.5.30
+* Tested with BuddyBoss Platform plugin version 2.10.0
 
 = Support, Feedback, & Contribute =
 
@@ -43,9 +43,8 @@ To ensure new releases cause as little disruption as possible, we rely on early 
 == Upgrade Notice ==
 
 == Changelog ==
-
 = 0.0.2 =
-* Updated release.
+* Tested with BuddyBoss Platform version 2.10.0.
 
 = 0.0.1 =
 * Initial public release.

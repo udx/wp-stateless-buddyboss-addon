@@ -10,7 +10,7 @@
  * Author URI: https://udx.io
  * License: GPLv2 or later
  * 
- * Copyright 2024-2025 UDX (email: info@udx.io)
+ * Copyright 2025 UDX (email: info@udx.io)
  */
 
 namespace SLCA\BuddyBoss;
