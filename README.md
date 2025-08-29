@@ -8,7 +8,7 @@ Provides compatibility between the [BuddyBoss Platform](https://www.buddyboss.co
 
 ### Notes
 
-* Tested with BuddyBoss Platform plugin version 2.5.30
+* Tested with BuddyBoss Platform plugin version 2.10.0
 
 ### Support, Feedback, & Contribute
 

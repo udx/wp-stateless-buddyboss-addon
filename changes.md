@@ -1,3 +1,5 @@
-#### 0.0.1
+#### 0.0.2
+* Tested with BuddyBoss Platform version 2.10.0.
 
-- Initial public release.
+#### 0.0.1
+* Initial public release.

@@ -31,6 +31,7 @@ class BuddyBoss extends Compatibility {
    */
   public function skip_cache_busting( $return, $filename ) {
     $info = pathinfo( $filename );
+    // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
     $backtrace = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 8 );
     if( empty( $info[ 'extension' ] ) && strpos( $backtrace[ 6 ][ 'file' ], '/buddyboss-platform/' ) !== false ) {
       return $filename;
