@@ -37,6 +37,15 @@ class ClassBuddyBossTest extends TestCase {
     self::assertNotFalse( has_filter('stateless_skip_cache_busting', [ $budyboss, 'skip_cache_busting' ]) );
   }
 
+  public function testShouldCountHooks() {
+    $budyboss = new BuddyBoss();
+
+    Functions\expect('add_action')->times(0);
+    Functions\expect('add_filter')->times(1);
+
+    $budyboss->module_init([]);
+  }
+
   public function testShouldSkipCacheBusting() {
     $budyboss = new BuddyBoss();
 
